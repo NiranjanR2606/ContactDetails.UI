@@ -1,0 +1,61 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Contact</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form #form="ngForm" (ngSubmit)="updateContact()">
+                <div class="mb-3">
+                    <input type="hidden" class="form-control" id="id" name="id"
+                        [(ngModel)]="contactDetail.id">
+                </div>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName"
+                        [(ngModel)]="contactDetail.firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName"
+                        [(ngModel)]="contactDetail.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email"
+                        [(ngModel)]="contactDetail.email">
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                        [(ngModel)]="contactDetail.phoneNumber">
+                </div>
+                <div class="col-12 mb-1">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" name="address"
+                        [(ngModel)]="contactDetail.address"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" name="city" [(ngModel)]="contactDetail.city">
+                </div>
+                <div class="mb-3">
+                    <label for="state" class="form-label">State</label>
+                    <input type="text" class="form-control" id="state" name="state"
+                        [(ngModel)]="contactDetail.state">
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" class="form-control" id="country" name="country"
+                        [(ngModel)]="contactDetail.country">
+                </div>
+                <div class="mb-3">
+                    <label for="postalCode" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" name="postalCode"
+                        [(ngModel)]="contactDetail.postalCode">
+                </div>
+                <button type="submit" class="btn btn-primary mx-2">Update</button>
+                <button type="button" class="btn btn-danger mx-2" (click)="deleteContact(contactDetail.id)">Delete</button>
+                <a class="link float-end" aria-current="page" routerLink="/contacts">Back To List</a>
+            </form>
+        </div>
+    </div>
+
+</div>

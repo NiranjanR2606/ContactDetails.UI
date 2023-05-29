@@ -1,0 +1,56 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Contact</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form #form="ngForm" (ngSubmit)="addContact()">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName"
+                        [(ngModel)]="addContactRequest.firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName"
+                        [(ngModel)]="addContactRequest.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email"
+                        [(ngModel)]="addContactRequest.email">
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                        [(ngModel)]="addContactRequest.phoneNumber">
+                </div>
+                <div class="col-12 mb-1">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" name="address"
+                        [(ngModel)]="addContactRequest.address"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" name="city" [(ngModel)]="addContactRequest.city">
+                </div>
+                <div class="mb-3">
+                    <label for="state" class="form-label">State</label>
+                    <input type="text" class="form-control" id="state" name="state"
+                        [(ngModel)]="addContactRequest.state">
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" class="form-control" id="country" name="country"
+                        [(ngModel)]="addContactRequest.country">
+                </div>
+                <div class="mb-3">
+                    <label for="postalCode" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" name="postalCode"
+                        [(ngModel)]="addContactRequest.postalCode">
+                </div>
+                <button type="submit" class="btn btn-primary mx-2">Save</button>
+                <a class="link float-end" aria-current="page" routerLink="/contacts">Back To List</a>
+            </form>
+        </div>
+    </div>
+
+</div>
