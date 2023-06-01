@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.swal-wide{
+    width:400px !important;
+}
+.swal-wide .swal2-title{
+    font-size: 20px;
+}
+
+.swal-wide .swal2-icon {
+    font-size: 10px;
+}

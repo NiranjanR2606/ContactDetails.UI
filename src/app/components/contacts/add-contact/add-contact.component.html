@@ -4,22 +4,22 @@
         <div class="col-md-6">
             <form #form="ngForm" (ngSubmit)="addContact()">
                 <div class="mb-3">
-                    <label for="firstName" class="form-label">First Name</label>
+                    <label for="firstName" class="form-label">First Name</label><span class="text-danger">*</span>
                     <input type="text" class="form-control" id="firstName" name="firstName"
                         [(ngModel)]="addContactRequest.firstName">
                 </div>
                 <div class="mb-3">
-                    <label for="lastName" class="form-label">Last Name</label>
+                    <label for="lastName" class="form-label">Last Name</label><span class="text-danger">*</span>
                     <input type="text" class="form-control" id="lastName" name="lastName"
                         [(ngModel)]="addContactRequest.lastName">
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
+                    <label for="email" class="form-label">Email</label><span class="text-danger">*</span>
                     <input type="email" class="form-control" id="email" name="email"
                         [(ngModel)]="addContactRequest.email">
                 </div>
                 <div class="mb-3">
-                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <label for="phoneNumber" class="form-label">Phone Number</label><span class="text-danger">*</span>
                     <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
                         [(ngModel)]="addContactRequest.phoneNumber">
                 </div>

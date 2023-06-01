@@ -13,6 +13,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AuthGuard } from './guards/auth-guard.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataTablesModule } from 'angular-datatables';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -39,7 +40,8 @@ export function tokenGetter() {
       }
     }),
     BrowserAnimationsModule,
-    DataTablesModule
+    DataTablesModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
